@@ -23,7 +23,9 @@
                     </div>
                     <div class="py-6">
                         <h2 class="text-3xl text-gray-800 font-bold">Sign in</h2>
-                        <p class="text-sm">Don't have an account? <span class="text-primaryRed">Sign up</span></p>
+                        <p class="text-sm">Don't have an account? <span class="text-primaryRed">
+                            <a routerLink="/signup">Sign Up</a>
+                        </span></p>
                     </div>
                     <form>
                         <div class="grid grid-cols-1 space-y-6">
@@ -72,11 +74,15 @@
                     </form>
 
                     <div class="mt-6">
-                        <div class="">
+                        <div class="flex justify-between space-x-2 items-center">
+                          <div class="h-0.5 w-24 bg-gray-200"></div>
+                          <div class="">
                             <p class="text-center text-gray-400 text-sm">
                                 Or continue with
 
                             </p>
+                          </div>
+                          <div class="h-0.5 w-24 bg-gray-200"></div>
                         </div>
 
                         <div class="mt-6">
