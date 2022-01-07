@@ -1,5 +1,5 @@
 <div class="flex h-screen overflow-hidden">
-    <aside class="bg-customBlack w-72 hover:overflow-y-auto p-4 shrink-0 ">
+    <aside class="bg-customBlack w-72 hover:overflow-y-auto p-4 shrink-0 hidden lg:block">
         <div class="flex justify-between">
             <div class="">
                 <svg _ngcontent-vdj-c16="" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -381,9 +381,9 @@
         </div>
 
     </aside>
-    <main class="grow bg-gray-200 min-h-screen">
+    <main class="grow bg-gray-200 min-h-screen overflow-scroll">
 
-        <div class="flex justify-between bg-white py-6 px-6">
+        <div class="flex justify-between bg-white py-6 px-6 border border-b shadow-xl">
             <div class="">
                 <svg aria-hidden="true" data-prefix="fas" data-icon="bars"
                     class="svg-inline--fa fa-bars fa-w-14 w-6 h-6 text-gray-500" xmlns="http://www.w3.org/2000/svg"
@@ -394,35 +394,84 @@
             </div>
             <div class="">
                 <svg aria-hidden="true" data-prefix="fas" data-icon="compress-arrows-alt"
-                    class="svg-inline--fa fa-compress-arrows-alt fa-w-16 w-6 h-6 text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512">
+                    class="svg-inline--fa fa-compress-arrows-alt fa-w-16 w-6 h-6 text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="currentColor"
                         d="M200 288H88c-21.4 0-32.1 25.8-17 41l32.9 31-99.2 99.3c-6.2 6.2-6.2 16.4 0 22.6l25.4 25.4c6.2 6.2 16.4 6.2 22.6 0L152 408l31.1 33c15.1 15.1 40.9 4.4 40.9-17V312c0-13.3-10.7-24-24-24zm112-64h112c21.4 0 32.1-25.9 17-41l-33-31 99.3-99.3c6.2-6.2 6.2-16.4 0-22.6L481.9 4.7c-6.2-6.2-16.4-6.2-22.6 0L360 104l-31.1-33C313.8 55.9 288 66.6 288 88v112c0 13.3 10.7 24 24 24zm96 136 33-31.1c15.1-15.1 4.4-40.9-17-40.9H312c-13.3 0-24 10.7-24 24v112c0 21.4 25.9 32.1 41 17l31-32.9 99.3 99.3c6.2 6.2 16.4 6.2 22.6 0l25.4-25.4c6.2-6.2 6.2-16.4 0-22.6L408 360zM183 71.1 152 104 52.7 4.7c-6.2-6.2-16.4-6.2-22.6 0L4.7 30.1c-6.2 6.2-6.2 16.4 0 22.6L104 152l-33 31.1C55.9 198.2 66.6 224 88 224h112c13.3 0 24-10.7 24-24V88c0-21.3-25.9-32-41-16.9z" />
                 </svg>
             </div>
         </div>
 
-        <div class="profile flex justify-between">
-            <div class="flex">
-                <div class="">Image</div>
-                <div class="">Profile name</div>
+        <div class="profile flex flex-col lg:flex-row justify-between bg-white p-2 py-8 lg:py-16 lg:p-16">
+            <div class="flex items-center space-x-6">
+                <div class="shrink-0">
+                    <img src="../assets/images/haseeb-circle.png" alt="" class="rounded-full h-24 w-24" srcset="">
+                </div>
+                <div class="">
+                    <h2 class="text-xl lg:text-4xl">Welcome back, Haseeb!</h2>
+                    <p class="space-x-2 flex items-center">
+                        <span class="text-gray-600">
+                            <svg aria-hidden="true" data-prefix="far" data-icon="bell"
+                                class="svg-inline--fa fa-bell fa-w-14 w-4 h-4 text-gray-500"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z" />
+                            </svg>
+                        </span>
+                        <span class="text-gray-500 font-light">You have 2 new messages and 15 new tasks</span>
+                    </p>
+                </div>
             </div>
-            <div class="">
+
+            <div class="flex items-center mt-3 lg:mt-0">
                 <ul class="flex space-x-2">
-                    <li class="">
-                        <span>Icon</span>
+                    <li class="bg-customBlack px-6 py-2 rounded-full text-gray-100 flex items-center space-x-2">
+
+                        <span>
+                            <svg aria-hidden="true" data-prefix="fas" data-icon="envelope"
+                                class="svg-inline--fa fa-envelope fa-w-16 w-4 h-4 text-white"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+                            </svg>
+                        </span>
+
                         <span>Message</span>
                     </li>
-                    <li class="">
-                        <span>Icon</span>
-                        <span>Message</span>
+                    <li class="bg-indigo-900 px-6 py-2 rounded-full text-gray-100 flex items-center space-x-2">
+
+                        <span>
+                            <svg aria-hidden="true" data-prefix="fas" data-icon="cog"
+                                class="svg-inline--fa fa-cog fa-w-16 w-4 h-4 text-white"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor"
+                                    d="m487.4 315.7-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z" />
+                            </svg>
+                        </span>
+
+                        <span>Settings</span>
                     </li>
 
                 </ul>
             </div>
+
         </div>
+
+
+
+
+
+
+        
+
+
+        <router-outlet></router-outlet> 
+
+
+
+
+
     </main>
 </div>
 
 
-<router-outlet></router-outlet>
